@@ -1,0 +1,44 @@
+.center{
+    margin: auto;
+    width: fit-content;
+}
+
+.side_by_side{
+    float: left;
+}
+
+a{
+    font-size: 25px;
+}
+
+.input_types{
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+}
+
+input[type=checkbox]{
+    transform: scale(1.75);
+}
+
+#description{
+    width: 99%;
+    height: 200px;
+}
+
+div{
+    border: 3px solid #070707;
+}
+
+.btn {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+
+
