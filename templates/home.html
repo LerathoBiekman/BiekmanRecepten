@@ -5,15 +5,70 @@
     <title>Biekman Recepten</title>
     {% include "header.html" %}
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/add_recipe.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
 </head>
 <body>
 <div class="hero-image">
-  <div class="hero-text">
-    <h1 style="font-size:50px">I am John Doe</h1>
-    <p>And I'm a Photographer</p>
-    <button>Hire me</button>
-  </div>
+    <div class="hero-text">
+      <h1 style="font-size:50px">Welkom</h1>
+      <p>Vind hier je Biekman recepten</p>
+    </div>
+</div>
+<div class="center">
+    <div class="inline">
+        <div class="side_by_side">
+            <h1>Vlees</h1>
+            <ul>
+                {% for elm in meat %}
+                    <li>{{ elm }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="side_by_side">
+            <h1>Vis</h1>
+            <ul>
+                {% for elm in fish %}
+                    <li>{{ elm }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="side_by_side">
+            <h1>Vegetarisch</h1>
+            <ul>
+                {% for elm in veggie %}
+                    <li>{{ elm }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="center">
+    <div class="inline">
+        <div class="side_by_side">
+            <h1>Seizoen</h1>
+            <ul>
+                {% for elm in seasons %}
+                    <li>{{ elm }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="side_by_side">
+            <h1>Gelegenheid</h1>
+            <ul>
+                {% for elm in occasion %}
+                    <li>{{ elm }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="side_by_side">
+            <h1>Continent</h1>
+            <ul>
+                {% for elm in continent %}
+                    <li>{{ elm }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 </body>
 </html>

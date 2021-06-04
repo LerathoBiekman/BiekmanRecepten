@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('add_recipe/', views.add_recipe),
+    path('search_engine/', views.search_engine),
 
 ]

@@ -5,7 +5,7 @@
     <title>Title</title>
     {% include "header.html" %}
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/add_recipe.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
     {% csrf_token %}
     <div class="center">
         <div>
-        <table class="table_text">
+        <table>
          <tr>
              <td><a>Titel:</a></td>
              <td><input type="text" id="title" name="title" placeholder="Wat is de titel van het recept?" class="input_types" required></td>

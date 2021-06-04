@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include "header.html" %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+</head>
+<body>
+<form method="post">
+{% csrf_token %}
+    <div class="center">
+        <div>
+            <a>Zoek hier naar je recept voor vandaag:</a>
+            <table>
+                <tr>
+                    <td><a>Soort gerecht:</a></td>
+                    <td>
+                        <select id="dish" name="dish" class="input_types" required>
+                            <option selected hidden value="">Maak een keuze...</option>
+                            {% for elm in dish %}
+                                <option>{{ elm }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a>Season:</a></td>
+                    <td>
+                        <select id="season" name="season" class="input_types" required>
+                            <option selected hidden value="">Maak een keuze...</option>
+                            {% for season in seasons %}
+                                <option>{{ season }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a>Bereidingstijd:</a></td>
+                    <td><input type="number" id="prep_time" name="prep_time" required class="input_types" value="20"></td>
+                </tr>
+                <tr>
+                    <td><a>Voor hoeveel mensen:</a></td>
+                    <td><input type="number" id="people" name="people" class="input_types" required value="2"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button class="btn" type="submit" name="submit" id="submit" value="submit">Submit</button>
+            <button class="btn" type="reset" name="reset">Reset</button>
+        </div>
+    </div>
+</form>
+<div class="center">
+    <table>
+        {% for elm in query %}
+            <tr>{{ elm }}</tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
